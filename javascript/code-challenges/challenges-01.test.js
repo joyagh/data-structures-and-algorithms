@@ -45,6 +45,7 @@ const allUpperCase = (arr) => {
   arr.forEach((str) => {
     arr3.push(str.toUpperCase());
   });
+  return arr3;
 };
 
 /* ------------------------------------------------------------------------------------------------
