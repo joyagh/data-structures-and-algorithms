@@ -9,7 +9,7 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-arr.forEach(())
+
 };
 
 /* ------------------------------------------------------------------------------------------------
