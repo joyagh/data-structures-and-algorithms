@@ -26,7 +26,8 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  // Solution code here...
+  let newValue = 0;
+  return arr.reduce((total, value) => total + value, newValue);
 };
 
 /* ------------------------------------------------------------------------------------------------
