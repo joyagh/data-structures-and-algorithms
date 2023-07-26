@@ -130,9 +130,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  return str.split('').reduce((a, b) => b + a, '');
 };
 
+// https://stackoverflow.com/questions/48174796/is-there-a-faster-reverse-string-algorithm-for-javascript
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
