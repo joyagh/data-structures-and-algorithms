@@ -120,7 +120,12 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let treats;
+  arr.forEach(store => {
+    if (store.store === 'Pet store') {
+      treats = store.items[1].quantity;
+    }});
+  return treats;
 };
 
 /* ------------------------------------------------------------------------------------------------
