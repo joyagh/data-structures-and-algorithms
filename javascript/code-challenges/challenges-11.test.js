@@ -145,7 +145,8 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  const heightArray = data.map(data => data.height);
+  return data.filter(obj => +obj.height === Math.min(...heightArray))[0].name;
 };
 
 /* ------------------------------------------------------------------------------------------------
