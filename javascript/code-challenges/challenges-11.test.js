@@ -19,7 +19,10 @@ Becomes:
 ------------------------------------------------------------------------------------------------ */
 
 function transformToLis(obj){
-  // Solution code here...
+  const arr = Object.entries(obj);
+  const newArr = [];
+  arr.forEach(item => newArr.push(`<li>${item[0]}: ${item[1]}</li>`));
+  return newArr;
 }
 
 /* ------------------------------------------------------------------------------------------------
