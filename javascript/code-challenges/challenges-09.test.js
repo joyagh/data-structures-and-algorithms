@@ -119,7 +119,11 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  for (const character of arr) {
+    if (character.house) {
+      houses.push(character.house);
+    }
+  }
   return houses;
 };
 
@@ -140,7 +144,7 @@ const hasChildrenValues = (arr, character) => {
     const values = Object.values(character);
     return values.includes(true);
   }
-    return false;
+  return false;
 };
 
 
