@@ -100,7 +100,11 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
+  const names = arr
+    .filter(character => parseInt(character.mass) > lukeMass)
+    .map(character => character.name);
 
+return names.join(' - ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -157,8 +161,28 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  const helpCheck = (row1, col1, row2, col2, row3, col3) => {
+    return (
+      board[row1][col1] !== '' &&
+      board[row1][col1] === board[row2][col2] &&
+      board[row2][col2] === board[row3][col3]
+    );
+  };
+
+  for (let i = 0; i < 3; i++) {
+    if (helpCheck(i, 0, i, 1, i, 2) || helpCheck(0, i, 1, i, 2, i)) {
+      return true; // Check rows and columns
+    }
+  }
+
+  if (helpCheck(0, 0, 1, 1, 2, 2) || helpCheck(0, 2, 1, 1, 2, 0)) {
+    return true; // Check diagonals
+  }
+
+  return false; // No winner found
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
